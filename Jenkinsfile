@@ -6,4 +6,7 @@ node {
         println "building code"
         sh 'dotnet build'
     }
+    stage('archive'){
+        archiveArtifacts 'bin/Debug/netcoreapp3.1/dotnetcoresample'
+    }
 }
